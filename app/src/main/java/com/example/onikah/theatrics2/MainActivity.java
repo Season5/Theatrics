@@ -1,11 +1,10 @@
 package com.example.onikah.theatrics2;
 
-import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.github.paolorotolo.appintro.AppIntro;
-import com.github.paolorotolo.appintro.AppIntroFragment;
 
 public class MainActivity  extends AppIntro {
 
@@ -20,34 +19,27 @@ public class MainActivity  extends AppIntro {
         addSlide(SampleSlide.newInstance(R.layout.third_fragment));
         addSlide(SampleSlide.newInstance(R.layout.fourth_fragment));
 
-        // OPTIONAL METHODS
-        // Override bar/separator color.
-        setBarColor(Color.parseColor("#3F51B5"));
-        setSeparatorColor(Color.parseColor("#2196F3"));
+        // SHOW or HIDE the statusbar
+        showStatusBar(true);
+        // Hide Skip/Done button
+        showSkipButton(true);
+        showDoneButton(true);
 
-        // Hide Skip/Done button.
-        showSkipButton(false);
-        setProgressButtonEnabled(false);
 
-        // Turn vibration on and set intensity.
-        // NOTE: you will probably need to ask VIBRATE permisssion in Manifest.
-        setVibrate(true);
-        setVibrateIntensity(30);
+        // Animations -- use only one of the below. Using both could cause errors.
+        setFadeAnimation();
     }
 
+//
+    private void loadMainActivity(){
+        Intent intent = new Intent(this, Main.class);
+        startActivity(intent);
+    }
     @Override
     public void onSkipPressed() {
         // Do something when users tap on Skip button.
-    }
-
-    @Override
-    public void onDonePressed() {
-        // Do something when users tap on Done button.
-    }
-
-    @Override
-    public void onSlideChanged() {
-        // Do something when the slide changes.
+        loadMainActivity();
+        Toast.makeText(getApplicationContext(), getString(R.string.skip), Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -55,4 +47,15 @@ public class MainActivity  extends AppIntro {
         // Do something when users tap on Next button.
     }
 
+    @Override
+    public void onDonePressed() {
+        // Do something when users tap on Done button.
+
+
+    }
+
+    @Override
+    public void onSlideChanged() {
+        // Do something when slide is changed
+    }
 }
