@@ -11,7 +11,7 @@ public class Main extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedIntanceState){
         super.onCreate(savedIntanceState);
-        setContentView(R.layout.fourth_fragment);
+        setContentView(R.layout.home);
     }
 }
 

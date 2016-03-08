@@ -50,7 +50,7 @@ public class MainActivity  extends AppIntro {
     @Override
     public void onDonePressed() {
         // Do something when users tap on Done button.
-
+        loadMainActivity();
 
     }
 
