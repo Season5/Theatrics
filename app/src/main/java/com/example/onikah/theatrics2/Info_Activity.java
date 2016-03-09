@@ -11,6 +11,6 @@ public class Info_Activity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedIntanceState){
         super.onCreate(savedIntanceState);
-        setContentView(R.layout.home);
+        setContentView(R.layout.info);
     }
 }
