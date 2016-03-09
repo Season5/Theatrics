@@ -26,4 +26,8 @@ dependencies {
     compile 'com.github.paolorotolo:appintro:3.4.0'
     compile 'com.android.support:design:23.2.0'
     compile 'uk.co.androidalliance:edgeeffectoverride:1.0.2'
+    compile 'com.github.paolorotolo:appintro:3.4.0'
+    compile 'com.android.support:design:23.2.0'
+    compile 'com.github.liuguangqiang.swipeback:library:1.0.2@aar'
+    compile 'com.github.traex.rippleeffect:library:1.3'
 }

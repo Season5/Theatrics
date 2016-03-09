@@ -1,11 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.onikah.theatrics2.MainActivity">
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/textView" />
-</LinearLayout>
+        android:text=" Lorem Ipsum as their default model text, and a search for &apos;lorem ipsum&apos; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).  "
+        android:id="@+id/textView2"
+        android:layout_marginTop="95dp"
+        android:textAlignment="center"
+        android:textSize="23dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+    <com.andexert.library.RippleView
+        android:id="@+id/more"
+        android:layout_width="?android:actionBarSize"
+        android:layout_height="?android:actionBarSize"
+        rv_centered="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="72dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true">
+
+    </com.andexert.library.RippleView>
+    <com.andexert.library.RippleView
+        android:id="@+id/more2"
+        android:layout_width="?android:actionBarSize"
+        android:layout_height="?android:actionBarSize"
+        rv_centered="true"
+        android:layout_alignTop="@+id/more"
+        android:layout_toEndOf="@+id/more"
+        android:layout_marginStart="68dp">
+
+        <ImageView
+            android:layout_width="?android:actionBarSize"
+            android:layout_height="?android:actionBarSize"
+            android:src="@drawable/plays"
+            android:layout_centerInParent="true"
+            android:padding="10dp"
+            android:background="@android:color/transparent"
+            android:onClick="onButtonClick"
+            android:id="@+id/button2"/>
+
+    </com.andexert.library.RippleView>
+
+    <ImageView
+        android:layout_width="?android:actionBarSize"
+        android:layout_height="?android:actionBarSize"
+        android:src="@drawable/info"
+        android:padding="10dp"
+        android:background="@android:color/transparent"
+        android:onClick="onButtonClick"
+        android:id="@+id/button"
+        android:layout_alignTop="@+id/more"
+        android:layout_alignStart="@+id/more" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Info"
+        android:id="@+id/textView"
+        android:layout_alignStart="@+id/more"
+        android:layout_below="@+id/more"
+        android:layout_toStartOf="@+id/more2"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Showings"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/more2"
+        android:layout_alignStart="@+id/more2" />
+</RelativeLayout>
