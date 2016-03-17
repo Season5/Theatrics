@@ -1,0 +1,26 @@
+<ua.zabelnikov.swipelayout.layout.frame.SwipeableLayout
+    android:id="@+id/swipeableLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:background="@drawable/hamlet" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:background="@drawable/phantom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+</ua.zabelnikov.swipelayout.layout.frame.SwipeableLayout>
